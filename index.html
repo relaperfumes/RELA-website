@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RÉLA Luxury Fragrances — lasts longer, feels richer.">
+  <title>RÉLA — Luxury Fragrances</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="#home">RÉLA</a>
+    <nav>
+      <a href="#collection">Collection</a>
+      <a href="#quiz">Find Your RÉLA</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="order-mini" href="#collection">Shop</a>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">LUXURY FRAGRANCES</p>
+        <h1>Lasts Longer.<br><span>Feels Richer.</span></h1>
+        <p class="lead">Discover RÉLA — elegant everyday fragrances designed to leave a lasting impression.</p>
+        <div class="actions">
+          <a class="btn gold" href="#collection">Explore Collection</a>
+          <a class="btn outline" href="#quiz">Find Your RÉLA</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="rela-brand.jpg" alt="RÉLA luxury fragrances">
+      </div>
+    </section>
+
+    <section id="collection" class="section">
+      <div class="section-head">
+        <p class="eyebrow">THE COLLECTION</p>
+        <h2>Choose your signature.</h2>
+        <p>Six RÉLA fragrances to match different moods and moments.</p>
+      </div>
+
+      <div class="products">
+        <article class="card">
+          <div class="card-tag">Warm</div>
+          <div class="bottle vanilla">VANILLA</div>
+          <h3>RÉLA Vanilla</h3>
+          <p>Soft, creamy and comforting.</p>
+          <div class="price">₹99</div>
+          <button onclick="order('RÉLA Vanilla')">Order on WhatsApp</button>
+        </article>
+
+        <article class="card">
+          <div class="card-tag">Golden</div>
+          <div class="bottle golden">GOLDEN DUSK</div>
+          <h3>RÉLA Golden Dusk</h3>
+          <p>Rich, warm and unforgettable.</p>
+          <div class="price">₹99</div>
+          <button onclick="order('RÉLA Golden Dusk')">Order on WhatsApp</button>
+        </article>
+
+        <article class="card">
+          <div class="card-tag">Bold</div>
+          <div class="bottle musk">MUSK</div>
+          <h3>RÉLA Musk</h3>
+          <p>Clean, deep and confident.</p>
+          <div class="price">₹99</div>
+          <button onclick="order('RÉLA Musk')">Order on WhatsApp</button>
+        </article>
+
+        <article class="card">
+          <div class="card-tag">Elegant</div>
+          <div class="bottle liora">LIORA</div>
+          <h3>RÉLA Liora</h3>
+          <p>Elegant, smooth and expressive.</p>
+          <div class="price">₹99</div>
+          <button onclick="order('RÉLA Liora')">Order on WhatsApp</button>
+        </article>
+
+        <article class="card">
+          <div class="card-tag">Floral</div>
+          <div class="bottle rose">ROSE</div>
+          <h3>RÉLA Rose</h3>
+          <p>Fresh, romantic and graceful.</p>
+          <div class="price">₹99</div>
+          <button onclick="order('RÉLA Rose')">Order on WhatsApp</button>
+        </article>
+
+        <article class="card">
+          <div class="card-tag">Fresh</div>
+          <div class="bottle jean">JEAN</div>
+          <h3>RÉLA Jean</h3>
+          <p>Fresh, modern and effortless.</p>
+          <div class="price">₹99</div>
+          <button onclick="order('RÉLA Jean')">Order on WhatsApp</button>
+        </article>
+      </div>
+
+      <div class="combo">
+        <div>
+          <p class="eyebrow">BEST VALUE</p>
+          <h2>Pick any 3 for ₹249</h2>
+          <p>Build your own RÉLA fragrance trio.</p>
+        </div>
+        <button class="btn gold" onclick="order('RÉLA 3-perfume combo — ₹249')">Order the Combo</button>
+      </div>
+    </section>
+
+    <section id="quiz" class="quiz section">
+      <div class="section-head">
+        <p class="eyebrow">FRAGRANCE QUIZ</p>
+        <h2>Find Your RÉLA.</h2>
+        <p>Choose your mood and we'll suggest a fragrance.</p>
+      </div>
+      <div class="quiz-box">
+        <label for="mood">What's your vibe?</label>
+        <select id="mood">
+          <option value="vanilla">Soft & sweet</option>
+          <option value="golden">Warm & luxurious</option>
+          <option value="musk">Bold & confident</option>
+          <option value="liora">Elegant & smooth</option>
+          <option value="rose">Romantic & floral</option>
+          <option value="jean">Fresh & modern</option>
+        </select>
+        <button class="btn gold" onclick="findPerfume()">Reveal My RÉLA</button>
+        <div id="result" class="result"></div>
+      </div>
+    </section>
+
+    <section id="about" class="about section">
+      <div>
+        <p class="eyebrow">ABOUT RÉLA</p>
+        <h2>Luxury that fits your everyday.</h2>
+      </div>
+      <p>RÉLA creates accessible fragrances with a premium feel — made for people who want their scent to stay memorable.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="logo">RÉLA</div>
+    <p>Luxury Fragrances · Lasts Longer | Feels Richer</p>
+    <p>© 2026 RÉLA. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
