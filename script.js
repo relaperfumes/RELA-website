@@ -1,6 +1,6 @@
 // Replace this number with the RÉLA owner's WhatsApp number.
 // Use country code without + or spaces, e.g. 919876543210
-const WHATSAPP_NUMBER = "91XXXXXXXXXX";
+const WHATSAPP_NUMBER = "919344347754";
 
 function order(product) {
   if (WHATSAPP_NUMBER.includes("X")) {
