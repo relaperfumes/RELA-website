@@ -13,6 +13,7 @@
     <nav>
       <a href="#collection">Collection</a>
       <a href="#quiz">Find Your RÉLA</a>
+      <a href="#reviews">Reviews</a>
       <a href="#about">About</a>
     </nav>
     <a class="order-mini" href="#collection">Shop</a>
@@ -171,6 +172,64 @@
       </div>
     </section>
 
+    <section id="reviews" class="reviews section">
+      <div class="section-head">
+        <p class="eyebrow">CUSTOMER REVIEWS</p>
+        <h2>What Our Customers Say.</h2>
+        <p>Trusted by fragrance lovers worldwide.</p>
+      </div>
+
+      <div class="reviews-container">
+        <div class="review-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">"RÉLA Vanilla is absolutely divine! The scent lasts all day and smells so luxurious. Best purchase I've made."</p>
+          <p class="reviewer-name">— Sarah M.</p>
+          <p class="review-product">Verified Purchase: RÉLA Vanilla</p>
+        </div>
+
+        <div class="review-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">"Golden Dusk is perfect for evening outings. The warmth and richness last for hours. Highly recommend!"</p>
+          <p class="reviewer-name">— Rajesh K.</p>
+          <p class="review-product">Verified Purchase: RÉLA Golden Dusk</p>
+        </div>
+
+        <div class="review-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">"I got the combo pack and I'm obsessed with all three! The variety is amazing and the value is unbeatable."</p>
+          <p class="reviewer-name">— Priya S.</p>
+          <p class="review-product">Verified Purchase: Signature Combo</p>
+        </div>
+
+        <div class="review-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">"RÉLA Musk is bold and confident, just like the description. My new signature scent!"</p>
+          <p class="reviewer-name">— Aditya P.</p>
+          <p class="review-product">Verified Purchase: RÉLA Musk</p>
+        </div>
+
+        <div class="review-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">"Rose fragrance smells so elegant and fresh. Perfect for everyday wear. Very satisfied!"</p>
+          <p class="reviewer-name">— Anjali T.</p>
+          <p class="review-product">Verified Purchase: RÉLA Rose</p>
+        </div>
+
+        <div class="review-card">
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <p class="review-text">"Elan is my go-to for work. Fresh and modern without being overpowering. Love it!"</p>
+          <p class="reviewer-name">— Vikram N.</p>
+          <p class="review-product">Verified Purchase: RÉLA Elan</p>
+        </div>
+      </div>
+
+      <div class="review-form-section">
+        <h3>Share Your Review</h3>
+        <p>Loved your RÉLA fragrance? Let other customers know!</p>
+        <button class="btn gold" onclick="openReviewForm()">Write a Review</button>
+      </div>
+    </section>
+
     <section id="about" class="about section">
       <div>
         <p class="eyebrow">ABOUT RÉLA</p>
@@ -242,6 +301,64 @@
       <button id="comboWhatsapp" class="combo-order-btn" onclick="orderCombo()" disabled>
         Continue to WhatsApp
       </button>
+
+    </div>
+  </div>
+
+  <!-- REVIEW FORM MODAL -->
+  <div id="reviewModal" class="review-modal">
+    <div class="review-box">
+
+      <button class="close-review" onclick="closeReviewForm()">×</button>
+
+      <span class="eyebrow">SHARE YOUR EXPERIENCE</span>
+      <h2>Write a Review</h2>
+      <p>Help other RÉLA lovers find their perfect fragrance.</p>
+
+      <form id="reviewForm" onsubmit="submitReview(event)">
+
+        <div class="form-group">
+          <label for="reviewName">Your Name *</label>
+          <input type="text" id="reviewName" required placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+          <label for="reviewProduct">Which fragrance did you purchase? *</label>
+          <select id="reviewProduct" required>
+            <option value="">Select a fragrance</option>
+            <option value="RÉLA Vanilla">RÉLA Vanilla</option>
+            <option value="RÉLA Golden Dusk">RÉLA Golden Dusk</option>
+            <option value="RÉLA Musk">RÉLA Musk</option>
+            <option value="RÉLA Liora">RÉLA Liora</option>
+            <option value="RÉLA Rose">RÉLA Rose</option>
+            <option value="RÉLA Elan">RÉLA Elan</option>
+            <option value="RÉLA Javadhu">RÉLA Javadhu</option>
+            <option value="Signature Combo">Signature Combo</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="reviewRating">Rating *</label>
+          <select id="reviewRating" required>
+            <option value="">Select a rating</option>
+            <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+            <option value="4">⭐⭐⭐⭐ Good</option>
+            <option value="3">⭐⭐⭐ Average</option>
+            <option value="2">⭐⭐ Fair</option>
+            <option value="1">⭐ Poor</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="reviewText">Your Review *</label>
+          <textarea id="reviewText" required placeholder="Share your experience with this fragrance..." rows="5"></textarea>
+        </div>
+
+        <button type="submit" class="btn gold">Submit Review</button>
+
+      </form>
+
+      <div id="reviewMessage" class="review-message"></div>
 
     </div>
   </div>
