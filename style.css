@@ -154,6 +154,108 @@ footer {
 }
 footer .logo { margin-bottom: 10px; }
 
+/* COMBO MODAL */
+
+.combo-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.combo-modal.active {
+  display: flex;
+}
+
+.combo-box {
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: linear-gradient(145deg, #15181e, #0b0d10);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 30px 100px rgba(0,0,0,.7);
+}
+
+.combo-box h2 {
+  margin: 10px 0;
+}
+
+.combo-box > p {
+  color: var(--muted);
+  margin-bottom: 25px;
+}
+
+.close-combo {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  background: transparent;
+  color: white;
+  font-size: 30px;
+  padding: 0;
+}
+
+.perfume-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.perfume-option {
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 15px;
+  padding: 16px;
+  cursor: pointer;
+  color: #eee;
+  transition: .2s;
+}
+
+.perfume-option:hover {
+  border-color: var(--gold);
+}
+
+.perfume-option input {
+  accent-color: var(--gold);
+  margin-right: 8px;
+}
+
+.perfume-option:has(input:checked) {
+  border-color: var(--gold);
+  background: rgba(214,177,90,.10);
+}
+
+.selected-count {
+  text-align: center;
+  margin: 22px 0;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.combo-order-btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 999px;
+  border: none;
+  background: #f1eee6;
+  color: #111;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.combo-order-btn:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
 @media (max-width: 800px) {
   .nav nav { display:none; }
   .hero { grid-template-columns: 1fr; padding-top: 45px; }
@@ -165,4 +267,12 @@ footer .logo { margin-bottom: 10px; }
   .products { grid-template-columns: 1fr; }
   .hero { padding-left: 5%; padding-right: 5%; }
   .section { padding-left: 5%; padding-right: 5%; }
+  
+  .combo-box {
+    padding: 24px 18px;
+  }
+
+  .perfume-options {
+    grid-template-columns: 1fr;
+  }
 }
