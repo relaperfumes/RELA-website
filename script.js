@@ -72,3 +72,65 @@ function findPerfume() {
   };
   document.getElementById("result").textContent = names[mood];
 }
+
+// REVIEW FORM FUNCTIONS
+function openReviewForm() {
+  document.getElementById("reviewModal").classList.add("active");
+  document.getElementById("reviewForm").reset();
+  document.getElementById("reviewMessage").textContent = "";
+}
+
+function closeReviewForm() {
+  document.getElementById("reviewModal").classList.remove("active");
+}
+
+function submitReview(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("reviewName").value.trim();
+  const product = document.getElementById("reviewProduct").value;
+  const rating = document.getElementById("reviewRating").value;
+  const reviewText = document.getElementById("reviewText").value.trim();
+
+  if (!name || !product || !rating || !reviewText) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  const stars = "⭐".repeat(rating);
+  const message =
+`📝 New Customer Review 📝
+
+Name: ${name}
+Product: ${product}
+Rating: ${stars} (${rating}/5)
+
+Review:
+"${reviewText}"`;
+
+  // Show success message
+  const messageDiv = document.getElementById("reviewMessage");
+  messageDiv.textContent = "Thank you! Your review is being sent to RÉLA...";
+  messageDiv.style.color = "green";
+
+  // Send via WhatsApp
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank");
+
+  // Reset form after 2 seconds
+  setTimeout(() => {
+    closeReviewForm();
+  }, 2000);
+}
+
+// Close modals when clicking outside
+document.addEventListener("click", function(event) {
+  const comboModal = document.getElementById("comboModal");
+  const reviewModal = document.getElementById("reviewModal");
+
+  if (comboModal && event.target === comboModal) {
+    closeCombo();
+  }
+  if (reviewModal && event.target === reviewModal) {
+    closeReviewForm();
+  }
+});
