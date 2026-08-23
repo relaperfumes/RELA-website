@@ -83,39 +83,34 @@ h2 { font-size: clamp(34px, 5vw, 55px); margin: 8px 0 12px; }
 .card h3 { font-size: 25px; margin: 8px 0; }
 .card p { color: var(--muted); }
 
-/* Updated price styling to support old price, sale price and discount badge */
 .price {
-  display: inline-flex;
-  gap: 0.5rem;
+  display: flex;
   align-items: center;
-  font-size: 0.95rem;
-  margin: 15px 0;
-}
-.old-price {
-  text-decoration: line-through;
-  color: #888;
-  font-size: 0.9rem;
-}
-.sale-price {
-  font-weight: 700;
-  color: var(--gold); /* gold */
-  font-size: 1.05rem;
-}
-.discount {
-  background: var(--gold);
-  color: #fff;
-  padding: 0.15rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  line-height: 1;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-/* Make the discount badge stand out on the top-right of the card (optional) */
-.card { position: relative; }
-.card .discount {
-  position: absolute;
-  top: 12px;
-  right: 12px;
+.old-price {
+  font-size: 18px;
+  color: #888;
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+.new-price {
+  font-size: 32px;
+  color: #d4af37;
+  font-weight: 700;
+}
+
+.discount {
+  font-size: 13px;
+  color: #fff;
+  background: #8b0000;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 .card button { width: 100%; background: #f1eee6; color: #111; }
