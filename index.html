@@ -145,7 +145,7 @@
             <span class="discount">50% OFF</span>
           </div>
         </div>
-        <button class="btn gold" onclick="order('RÉLA 3-perfume combo — ₹249')">Order the Combo</button>
+        <button class="btn gold" onclick="openCombo()">Order the Combo</button>
       </div>
     </section>
 
@@ -185,6 +185,66 @@
     <p>Luxury Fragrances · Lasts Longer | Feels Richer</p>
     <p>© 2026 RÉLA. All rights reserved.</p>
   </footer>
+
+  <!-- COMBO SELECTION MODAL -->
+  <div id="comboModal" class="combo-modal">
+    <div class="combo-box">
+
+      <button class="close-combo" onclick="closeCombo()">×</button>
+
+      <span class="eyebrow">RÉLA SIGNATURE COMBO</span>
+      <h2>Choose Your 3 Perfumes</h2>
+      <p>Select exactly three fragrances for your combo.</p>
+
+      <div class="perfume-options">
+
+        <label class="perfume-option">
+          <input type="checkbox" value="RÉLA Vanilla" onchange="updateCombo()">
+          <span>RÉLA Vanilla</span>
+        </label>
+
+        <label class="perfume-option">
+          <input type="checkbox" value="RÉLA Golden Dusk" onchange="updateCombo()">
+          <span>RÉLA Golden Dusk</span>
+        </label>
+
+        <label class="perfume-option">
+          <input type="checkbox" value="RÉLA Musk" onchange="updateCombo()">
+          <span>RÉLA Musk</span>
+        </label>
+
+        <label class="perfume-option">
+          <input type="checkbox" value="RÉLA Liora" onchange="updateCombo()">
+          <span>RÉLA Liora</span>
+        </label>
+
+        <label class="perfume-option">
+          <input type="checkbox" value="RÉLA Rose" onchange="updateCombo()">
+          <span>RÉLA Rose</span>
+        </label>
+
+        <label class="perfume-option">
+          <input type="checkbox" value="RÉLA Jean" onchange="updateCombo()">
+          <span>RÉLA Jean</span>
+        </label>
+
+        <label class="perfume-option">
+          <input type="checkbox" value="RÉLA Javadhu" onchange="updateCombo()">
+          <span>RÉLA Javadhu</span>
+        </label>
+
+      </div>
+
+      <div class="selected-count">
+        <span id="selectedCount">0</span> / 3 selected
+      </div>
+
+      <button id="comboWhatsapp" class="combo-order-btn" onclick="orderCombo()" disabled>
+        Continue to WhatsApp
+      </button>
+
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
