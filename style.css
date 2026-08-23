@@ -91,16 +91,18 @@ h2 { font-size: clamp(34px, 5vw, 55px); margin: 8px 0 12px; }
 }
 
 .old-price {
-  font-size: 18px;
-  color: #888;
+  font-size: 17px;
+  color: #777;
   text-decoration: line-through;
   font-weight: 500;
 }
 
-.new-price {
+.sale-price {
   font-size: 32px;
   color: #d4af37;
   font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1;
 }
 
 .discount {
