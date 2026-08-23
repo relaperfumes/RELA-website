@@ -99,7 +99,7 @@ h2 { font-size: clamp(34px, 5vw, 55px); margin: 8px 0 12px; }
 
 .sale-price {
   font-size: 32px;
-  color: #d4af37;
+  color: var(--gold);
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1;
